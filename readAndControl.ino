@@ -1,4 +1,4 @@
-void voltage_read(); //Protótipo de função
+void readAndControl(); //Protótipo de função
 
 
 const int entrada1 = A0, entrada2 = A1, entrada3 = A2, entrada4 = A3, entrada5 = A4;
@@ -36,17 +36,17 @@ extern const int motorCCW4;
 
 //-----------------------------------------------------------Funções externas----------------------------------------------------------------
 extern void ajustarTensao();
-extern double readVoltage();
+extern double getVoltage();
 
 
-void voltage_read()
+void readAndControl()
 {
   int cont = 0;
-  voltageRead1 = readVoltage(entrada1, frequency);//Posto 4
-  voltageRead2 = readVoltage(entrada2, frequency);//Posto 3
-  voltageRead3 = readVoltage(entrada3, frequency);//Posto 2
-  voltageRead4 = readVoltage(entrada4, frequency);//Posto 1
-  voltage_source = readVoltage(entrada5, frequency);//Fonte de alimentação
+  voltageRead1 = getVoltage(entrada1, frequency);//Posto 4
+  voltageRead2 = getVoltage(entrada2, frequency);//Posto 3
+  voltageRead3 = getVoltage(entrada3, frequency);//Posto 2
+  voltageRead4 = getVoltage(entrada4, frequency);//Posto 1
+  voltage_source = getVoltage(entrada5, frequency);//Fonte de alimentação
 
   ajustarTensao(voltageRead1, voltage_1, fimDeCursoCW4, fimDeCursoCCW4, motorCW4, motorCCW4, 2, 0, entrada1);//Posto 4
   ajustarTensao(voltageRead2, voltage_2, fimDeCursoCW3, fimDeCursoCCW3, motorCW3, motorCCW3, 2, 1, entrada2);//Posto 3
