@@ -1,4 +1,4 @@
-double readVoltage();//protótipo de função
+double getVoltage();//protótipo de função
 
 double erro = 0, rms;
 double media1 = 0, media2 = 0, media3 = 0, media4 = 0, media5 = 220, soma = 0;
@@ -15,7 +15,7 @@ extern int voltage_2;
 extern int voltage_3;
 extern int voltage_4;
 
-double readVoltage(int pin, int frequency) {
+double getVoltage(int pin, int frequency) {
   
   for (int i = 0; i < 10000; i++) {
     voltage_vector[i] = analogRead(pin);

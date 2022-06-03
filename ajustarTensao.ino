@@ -16,27 +16,27 @@ void ajustarTensao(int voltageRead, int voltage, int FcursoH, int FcursoA, int m
         delay(10);
         digitalWrite(motor_horario, LOW);
         digitalWrite(motor_anti_horario, LOW);
-        voltageRead = readVoltage(pin, 60);
-        voltageRead = readVoltage(pin, 60);
-        voltageRead = readVoltage(pin, 60);
-        voltageRead = readVoltage(pin, 60);
+        voltageRead = getVoltage(pin, 60);
+        voltageRead = getVoltage(pin, 60);
+        voltageRead = getVoltage(pin, 60);
+        voltageRead = getVoltage(pin, 60);
       }
       else {
         digitalWrite(motor_horario, HIGH);
         digitalWrite(motor_anti_horario, LOW);
-        voltageRead = readVoltage(pin, 60);
-        //voltageRead = readVoltage(pin, 60);
+        voltageRead = getVoltage(pin, 60);
+        //voltageRead = getVoltage(pin, 60);
         digitalWrite(motor_horario, LOW);
         digitalWrite(motor_anti_horario, LOW);
-        voltageRead = readVoltage(pin, 60);
-        voltageRead = readVoltage(pin, 60);
-        voltageRead = readVoltage(pin, 60);
-        voltageRead = readVoltage(pin, 60);
-        voltageRead = readVoltage(pin, 60);
-        voltageRead = readVoltage(pin, 60);
-        voltageRead = readVoltage(pin, 60);
-        voltageRead = readVoltage(pin, 60);
-        voltageRead = readVoltage(pin, 60);
+        voltageRead = getVoltage(pin, 60);
+        voltageRead = getVoltage(pin, 60);
+        voltageRead = getVoltage(pin, 60);
+        voltageRead = getVoltage(pin, 60);
+        voltageRead = getVoltage(pin, 60);
+        voltageRead = getVoltage(pin, 60);
+        voltageRead = getVoltage(pin, 60);
+        voltageRead = getVoltage(pin, 60);
+        voltageRead = getVoltage(pin, 60);
 
       }
     }
@@ -49,15 +49,15 @@ void ajustarTensao(int voltageRead, int voltage, int FcursoH, int FcursoA, int m
         digitalWrite(motor_horario, LOW);
         digitalWrite(motor_anti_horario, LOW);
 
-        voltageRead = readVoltage(pin, 60);
-        voltageRead = readVoltage(pin, 60);
-        voltageRead = readVoltage(pin, 60);
-        voltageRead = readVoltage(pin, 60);
-        voltageRead = readVoltage(pin, 60);
-        voltageRead = readVoltage(pin, 60);
-        voltageRead = readVoltage(pin, 60);
-        voltageRead = readVoltage(pin, 60);
-        voltageRead = readVoltage(pin, 60);
+        voltageRead = getVoltage(pin, 60);
+        voltageRead = getVoltage(pin, 60);
+        voltageRead = getVoltage(pin, 60);
+        voltageRead = getVoltage(pin, 60);
+        voltageRead = getVoltage(pin, 60);
+        voltageRead = getVoltage(pin, 60);
+        voltageRead = getVoltage(pin, 60);
+        voltageRead = getVoltage(pin, 60);
+        voltageRead = getVoltage(pin, 60);
         //delay(300);
       }
       else {
@@ -65,8 +65,8 @@ void ajustarTensao(int voltageRead, int voltage, int FcursoH, int FcursoA, int m
         digitalWrite(motor_horario, LOW);
         digitalWrite(motor_anti_horario, HIGH);
 
-        voltageRead = readVoltage(pin, 60);
-        voltageRead = readVoltage(pin, 60);
+        voltageRead = getVoltage(pin, 60);
+        voltageRead = getVoltage(pin, 60);
 
         digitalWrite(motor_horario, LOW);
         digitalWrite(motor_anti_horario, LOW);
@@ -87,35 +87,35 @@ void ajustarTensao(int voltageRead, int voltage, int FcursoH, int FcursoA, int m
     else if (voltageRead > voltage && digitalRead(FcursoA) > 0 && abs(voltageRead - voltage) <= 10) {
       digitalWrite(motor_horario, HIGH);
       digitalWrite(motor_anti_horario, LOW);
-      voltageRead = readVoltage(pin, 60);
+      voltageRead = getVoltage(pin, 60);
       digitalWrite(motor_horario, LOW);
       digitalWrite(motor_anti_horario, LOW);
-      voltageRead = readVoltage(pin, 60);
-      voltageRead = readVoltage(pin, 60);
-      voltageRead = readVoltage(pin, 60);
-      voltageRead = readVoltage(pin, 60);
-      voltageRead = readVoltage(pin, 60);
-      voltageRead = readVoltage(pin, 60);
-      voltageRead = readVoltage(pin, 60);
-      voltageRead = readVoltage(pin, 60);
-      voltageRead = readVoltage(pin, 60);
+      voltageRead = getVoltage(pin, 60);
+      voltageRead = getVoltage(pin, 60);
+      voltageRead = getVoltage(pin, 60);
+      voltageRead = getVoltage(pin, 60);
+      voltageRead = getVoltage(pin, 60);
+      voltageRead = getVoltage(pin, 60);
+      voltageRead = getVoltage(pin, 60);
+      voltageRead = getVoltage(pin, 60);
+      voltageRead = getVoltage(pin, 60);
 
     }
     else if (voltageRead < voltage && digitalRead(FcursoH) > 0 && abs(voltageRead - voltage) <= 10) {
       digitalWrite(motor_horario, LOW);
       digitalWrite(motor_anti_horario, HIGH);
-      voltageRead = readVoltage(pin, 60);
+      voltageRead = getVoltage(pin, 60);
       digitalWrite(motor_horario, LOW);
       digitalWrite(motor_anti_horario, LOW);
-      voltageRead = readVoltage(pin, 60);
-      voltageRead = readVoltage(pin, 60);
-      voltageRead = readVoltage(pin, 60);
-      voltageRead = readVoltage(pin, 60);
-      voltageRead = readVoltage(pin, 60);
-      voltageRead = readVoltage(pin, 60);
-      voltageRead = readVoltage(pin, 60);
-      voltageRead = readVoltage(pin, 60);
-      voltageRead = readVoltage(pin, 60);
+      voltageRead = getVoltage(pin, 60);
+      voltageRead = getVoltage(pin, 60);
+      voltageRead = getVoltage(pin, 60);
+      voltageRead = getVoltage(pin, 60);
+      voltageRead = getVoltage(pin, 60);
+      voltageRead = getVoltage(pin, 60);
+      voltageRead = getVoltage(pin, 60);
+      voltageRead = getVoltage(pin, 60);
+      voltageRead = getVoltage(pin, 60);
 
     }
   }

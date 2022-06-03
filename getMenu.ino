@@ -1,10 +1,10 @@
-void get_menu(); //Protótipo de função
+void getMenu(); //Protótipo de função
 
 //Funções externas:
-extern void voltage_read();
+extern void readAndControl();
 
 
-void get_menu(int cursor, bool write_menu, int menu)
+void getMenu(int cursor, bool write_menu, int menu)
 {
 
   if (write_menu == 1)
@@ -116,5 +116,5 @@ void get_menu(int cursor, bool write_menu, int menu)
     write_menu = 0;
   }
 
-  if(menu == 3) voltage_read();
+  if(menu == 3) readAndControl();
 }

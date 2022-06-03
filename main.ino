@@ -31,9 +31,9 @@ int cursor = 0, menu = 1;
 bool write_menu = 0;
 //funções externas:
 extern void ajustarTensao();
-extern double readVoltage();
-extern void voltage_read();
-extern void get_Menu();
+extern double getVoltage();
+extern void readAndControl();
+extern void getMenu();
 
 void setup()
 {
@@ -146,7 +146,7 @@ void loop()
     write_menu = 1;
     delay(200);
   }
-  get_menu(cursor, write_menu, menu);
+  getMenu(cursor, write_menu, menu);
   write_menu = 0;
   getDesiredVoltage(0);
 }
