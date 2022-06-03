@@ -13,13 +13,13 @@ void getMenu(int cursor, bool write_menu, int menu)
     {
       lcd.clear();
       lcd.setCursor(1, 0);
-      lcd.print("Posto 4");
-      lcd.setCursor(1, 1);
-      lcd.print("Posto 3");
-      lcd.setCursor(1, 2);
-      lcd.print("Posto 2");
-      lcd.setCursor(1, 3);
       lcd.print("Posto 1");
+      lcd.setCursor(1, 1);
+      lcd.print("Posto 2");
+      lcd.setCursor(1, 2);
+      lcd.print("Posto 3");
+      lcd.setCursor(1, 3);
+      lcd.print("Posto 4");
       digitalWrite(motorCCW1, LOW);
       digitalWrite(motorCW1, LOW);
       digitalWrite(motorCCW2, LOW);
@@ -98,13 +98,13 @@ void getMenu(int cursor, bool write_menu, int menu)
   {
     lcd.clear();
     lcd.setCursor(0, 0);
-    lcd.print("Voltage 4:");
-    lcd.setCursor(0, 1);
-    lcd.print("Voltage 3:");
-    lcd.setCursor(0, 2);
-    lcd.print("Voltage 2:");
-    lcd.setCursor(0, 3);
     lcd.print("Voltage 1:");
+    lcd.setCursor(0, 1);
+    lcd.print("Voltage 2:");
+    lcd.setCursor(0, 2);
+    lcd.print("Voltage 3:");
+    lcd.setCursor(0, 3);
+    lcd.print("Voltage 4:");
     lcd.setCursor(17, 0);
     lcd.print("V");
     lcd.setCursor(17, 1);

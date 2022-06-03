@@ -22,11 +22,11 @@ double calculaErro(int posto, int tensao_selecionada, int frequency){
       break;
 
       case 127:
-        return 3;
+        return 2;
       break;
 
-      case 135:
-        return 3;
+      case 134:
+        return 4;
       break;
 
       case 207:
@@ -38,23 +38,23 @@ double calculaErro(int posto, int tensao_selecionada, int frequency){
       break;
 
       case 220:
-        return 2;
+        return 1;
       break;
 
       case 230:
-        return 1;
+        return -4;
       break;
 
       case 233:
-        return 1;
+        return -2;
       break;
 
       case 242:
-        return -2;
+        return -4;
       break;
       
       case 244:
-        return -3;
+        return -5;
       break;
      
      }
@@ -83,8 +83,8 @@ double calculaErro(int posto, int tensao_selecionada, int frequency){
         return 2;
       break;
 
-      case 135:
-        return 3;
+      case 134:
+        return 4;
       break;
 
       case 207:
@@ -100,15 +100,15 @@ double calculaErro(int posto, int tensao_selecionada, int frequency){
       break;
 
       case 230:
-        return 2;
+        return 1;
       break;
 
       case 233:
-        return 0;
+        return 1;
       break;
 
       case 242:
-        return -4;
+        return -2;
       break;
       
       case 244:
@@ -141,8 +141,8 @@ double calculaErro(int posto, int tensao_selecionada, int frequency){
         return 4;
       break;
 
-      case 135:
-        return 4;
+      case 134:
+        return 5;
       break;
 
       case 207:
@@ -162,7 +162,7 @@ double calculaErro(int posto, int tensao_selecionada, int frequency){
       break;
 
       case 233:
-        return 0;
+        return 2;
       break;
 
       case 242:
@@ -170,7 +170,7 @@ double calculaErro(int posto, int tensao_selecionada, int frequency){
       break;
       
       case 244:
-        return -2;
+        return -1;
       break;
      
      }
@@ -199,8 +199,8 @@ double calculaErro(int posto, int tensao_selecionada, int frequency){
         return 4;
       break;
 
-      case 135:
-        return 5;
+      case 134:
+        return 6;
       break;
 
       case 207:
@@ -220,11 +220,11 @@ double calculaErro(int posto, int tensao_selecionada, int frequency){
       break;
 
       case 233:
-        return 2;
+        return 4;
       break;
 
       case 242:
-        return 0;
+        return 2;
       break;
       
       case 244:

@@ -6,6 +6,7 @@ int erro4 = 0, erro3 = 0, erro2 = 0, erro1 = 0;
 
 //variaveis externas
 extern int menu;
+extern int cursor;
 extern const int button_enter;
 extern const int button_esc;
 extern const int button_up;
@@ -108,19 +109,19 @@ void getDesiredVoltage(int pos)
       }
       general_voltage = (centena * 100) + (dezena * 10) + unidade;
       if (cursor == 0){
-        erro1 = calculaErro(4, general_voltage, frequency);
+        erro1 = calculaErro(1, general_voltage, frequency);
         voltage_1 = general_voltage + erro1;
       }
       if (cursor == 1){
-        erro2 = calculaErro(3, general_voltage, frequency);
+        erro2 = calculaErro(2, general_voltage, frequency);
         voltage_2 = general_voltage + erro2;
       }
       if (cursor == 2){
-        erro3 = calculaErro(2, general_voltage, frequency);
+        erro3 = calculaErro(3, general_voltage, frequency);
         voltage_3 = general_voltage + erro3;
       }
       if (cursor == 3){
-        erro4 = calculaErro(1, general_voltage, frequency);
+        erro4 = calculaErro(4, general_voltage, frequency);
         voltage_4 = general_voltage + erro4;
         //voltage_4 = general_voltage;
       }

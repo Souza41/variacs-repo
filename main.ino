@@ -87,13 +87,13 @@ void setup()
   lcd.setCursor(0, 0);
   lcd.print(">");
   lcd.setCursor(1, 0);
-  lcd.print("Posto 4");
-  lcd.setCursor(1, 1);
-  lcd.print("Posto 3");
-  lcd.setCursor(1, 2);
-  lcd.print("Posto 2");
-  lcd.setCursor(1, 3);
   lcd.print("Posto 1");
+  lcd.setCursor(1, 1);
+  lcd.print("Posto 2");
+  lcd.setCursor(1, 2);
+  lcd.print("Posto 3");
+  lcd.setCursor(1, 3);
+  lcd.print("Posto 4");
   Serial.begin(9600);// Inicialização da porta serial para debug
 }
 

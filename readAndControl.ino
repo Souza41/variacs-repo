@@ -1,7 +1,7 @@
 void readAndControl(); //Protótipo de função
 
 
-const int entrada1 = A0, entrada2 = A1, entrada3 = A2, entrada4 = A3, entrada5 = A4;
+const int posto4 = A0, posto3 = A1, posto2 = A2, posto1 = A3, fonte = A4;
 
 double voltageRead1 = 0, voltageRead2 = 0, voltageRead3 = 0, voltageRead4 = 0,voltageRead5 = 0, voltage_source;
 
@@ -16,6 +16,9 @@ extern int voltage_2;
 extern int voltage_3;
 extern int voltage_4;
 extern int frequency;
+extern int erro1;
+extern int erro2;
+extern int erro3;
 extern int erro4;
 extern const int fimDeCursoCW1;
 extern const int fimDeCursoCCW1;
@@ -42,16 +45,16 @@ extern double getVoltage();
 void readAndControl()
 {
   int cont = 0;
-  voltageRead1 = getVoltage(entrada1, frequency);//Posto 4
-  voltageRead2 = getVoltage(entrada2, frequency);//Posto 3
-  voltageRead3 = getVoltage(entrada3, frequency);//Posto 2
-  voltageRead4 = getVoltage(entrada4, frequency);//Posto 1
-  voltage_source = getVoltage(entrada5, frequency);//Fonte de alimentação
+  voltageRead1 = getVoltage(posto1, frequency);
+  voltageRead2 = getVoltage(posto2, frequency);
+  voltageRead3 = getVoltage(posto3, frequency);
+  voltageRead4 = getVoltage(posto4, frequency);
+  voltage_source = getVoltage(fonte, frequency);//Fonte de alimentação
 
-  ajustarTensao(voltageRead1, voltage_1, fimDeCursoCW4, fimDeCursoCCW4, motorCW4, motorCCW4, 2, 0, entrada1);//Posto 4
-  ajustarTensao(voltageRead2, voltage_2, fimDeCursoCW3, fimDeCursoCCW3, motorCW3, motorCCW3, 2, 1, entrada2);//Posto 3
-  ajustarTensao(voltageRead3, voltage_3, fimDeCursoCW2, fimDeCursoCCW2, motorCW2, motorCCW2, 1, 2, entrada3);//Posto 2
-  ajustarTensao(voltageRead4, voltage_4, fimDeCursoCW1, fimDeCursoCCW1, motorCW1, motorCCW1, 1, 3, entrada4);//Posto 1
+  ajustarTensao(voltageRead1, voltage_1, fimDeCursoCW1, fimDeCursoCCW1, motorCW1, motorCCW1, 1, 3, posto1);
+  ajustarTensao(voltageRead2, voltage_2, fimDeCursoCW2, fimDeCursoCCW2, motorCW2, motorCCW2, 1, 2, posto2);
+  ajustarTensao(voltageRead3, voltage_3, fimDeCursoCW3, fimDeCursoCCW3, motorCW3, motorCCW3, 2, 1, posto3);
+  ajustarTensao(voltageRead4, voltage_4, fimDeCursoCW4, fimDeCursoCCW4, motorCW4, motorCCW4, 2, 0, posto4);
 
   lcd.setCursor(11, 0);
   lcd.print(voltageRead1 - erro1);
