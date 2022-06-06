@@ -1,7 +1,7 @@
 double getVoltage();//protótipo de função
 
 double erro = 0, rms;
-double media1 = 0, media2 = 0, media3 = 0, media4 = 0, media5 = 220, soma = 0;
+double media1 = 100, media2 = 100, media3 = 100, media4 = 100, media5 = 220, soma = 0;
 double voltage_vector[10000]; //Vetor utilzado para a leitura da tensão
 
 //Variaveis externas:

@@ -96,24 +96,26 @@ void getMenu(int cursor, bool write_menu, int menu)
   }
   if (menu == 3)
   {
-    lcd.clear();
-    lcd.setCursor(0, 0);
-    lcd.print("Voltage 1:");
-    lcd.setCursor(0, 1);
-    lcd.print("Voltage 2:");
-    lcd.setCursor(0, 2);
-    lcd.print("Voltage 3:");
-    lcd.setCursor(0, 3);
-    lcd.print("Voltage 4:");
-    lcd.setCursor(17, 0);
-    lcd.print("V");
-    lcd.setCursor(17, 1);
-    lcd.print("V");
-    lcd.setCursor(17, 2);
-    lcd.print("V");
-    lcd.setCursor(17, 3);
-    lcd.print("V");
-    write_menu = 0;
+    if(write_menu == 1){
+      lcd.clear();
+      lcd.setCursor(0, 0);
+      lcd.print("Voltage 1:");
+      lcd.setCursor(0, 1);
+      lcd.print("Voltage 2:");
+      lcd.setCursor(0, 2);
+      lcd.print("Voltage 3:");
+      lcd.setCursor(0, 3);
+      lcd.print("Voltage 4:");
+      lcd.setCursor(17, 0);
+      lcd.print("V");
+      lcd.setCursor(17, 1);
+      lcd.print("V");
+      lcd.setCursor(17, 2);
+      lcd.print("V");
+      lcd.setCursor(17, 3);
+      lcd.print("V");
+      write_menu = 0;
+    }
   }
 
   if(menu == 3) readAndControl();
